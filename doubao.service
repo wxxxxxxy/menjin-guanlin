@@ -1,0 +1,21 @@
+[Unit]
+Description=Doubao Device Control Service
+After=network.target
+StartLimitIntervalSec=500
+StartLimitBurst=5
+
+[Service]
+User=orangepi
+Group=orangepi
+WorkingDirectory=/home/orangepi
+ExecStart=/usr/bin/python3 /home/orangepi/doubao.py
+Restart=always
+RestartSec=5
+KillMode=mixed
+TimeoutStopSec=30
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=doubao
+
+[Install]
+WantedBy=multi-user.target
