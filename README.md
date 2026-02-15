@@ -52,7 +52,7 @@ sudo journalctl -u doubao.service -f
 # 查看历史日志（最近100行）
 sudo journalctl -u doubao.service -n 100
 
-如何设置定时重启
+# 如何设置定时重启
 Orange Pi Zero3（Linux 系统）最稳定、通用的定时重启方法是用 crontab 定时任务，下面给你完整步骤与常用示例。
 一、准备工作
 用 SSH 或串口登录 Zero3，确保系统时间正确（否则定时不准）：
